@@ -6,7 +6,8 @@ import sys
 import requests
 from tqdm import tqdm
 from bs4 import BeautifulSoup
-from argument_parser import Parser
+
+from .argument_parser import Parser
 
 
 def check_version(cmd: str):
