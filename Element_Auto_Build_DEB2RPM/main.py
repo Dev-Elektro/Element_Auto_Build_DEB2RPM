@@ -142,7 +142,8 @@ def main():
         print('Ошибка сборки rpm пакета.', file=sys.stderr)
         subprocess.run('rm -rf ~/rpmbuild', shell=True)
         sys.exit(1)
-    print(f"Копирование rpm пакета > {known_args.path}element-desktop-{version}-1.el7.x86_64.rpm")
+    print(f"Копирование rpm пакета > {known_args.path}/element-desktop-{version}-1.el7.x86_64.rpm")
+    subprocess.run(f'rm -f {os.path.join(known_args.path, "element-desktop")}*', shell=True)
     v = subprocess.run(f'cp ~/rpmbuild/RPMS/x86_64/element-desktop-{version}-1.el7.x86_64.rpm {known_args.path}',
                    shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
     print("Очистка")
