@@ -8,4 +8,7 @@ pip install git+https://github.com/Dev-Elektro/Element_Auto_Build_DEB2RPM.git#eg
 
 ## Использование
 
+В системе должны быть установлены следующие пакеты:
+`rpm-build, snap, asar`
+
     element-auto-build-deb2rpm ~/repo -img ~/fon.jpg
