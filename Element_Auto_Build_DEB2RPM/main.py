@@ -7,7 +7,7 @@ import requests
 from tqdm import tqdm
 from bs4 import BeautifulSoup
 
-from .argument_parser import Parser
+from Element_Auto_Build_DEB2RPM.argument_parser import Parser
 
 
 def check_version(cmd: str):
